@@ -1,0 +1,97 @@
+body {
+    margin: 0 auto;
+    justify-items: center;
+    color: white;
+    width: 100%;
+    background-color: #202020;
+}
+
+h2 {
+    background-color: rgb(118, 111, 116);
+    border-radius: 12px;
+    line-height: 80px;
+    width: 500px;
+    padding: 0 20px;
+}
+
+.choose-table>input {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+p{
+    line-height: 20px;
+}
+
+p,form {
+    background-color: rgb(118, 111, 116);
+    border-radius: 12px;
+    width: 500px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+form {
+    margin-bottom: 30px;
+
+    label {
+        font-size: 17px;
+        letter-spacing: 0.03em;        ;
+    }
+
+    input[type="text"],input[type="number"], textarea, select {
+        padding: 0 0 0 10px;
+        
+        border-radius: 9px;
+        width: 200px;
+        height: 28px;
+        border: 2px solid #aaaaaa;
+    }
+    img {
+        width:150px;
+    }
+    textarea {
+        width: 250px;
+        height: 125px;
+    }
+    input[type="submit"], button[type="submit"] {
+        border-radius: 9px;
+        margin-top: 5px;
+        background-color: rgb(186, 0, 117);
+        border: 0px;
+        color: #dddddd;
+        font-weight: 600;
+        font-size: inherit;
+        padding: 5px 10px;
+    }
+}
+
+table {
+    border: 2px solid #202020;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    border-spacing: 0;
+    color: rgb(15, 15, 15);
+
+    tr:first-child th {
+        padding: 15px 0px
+    }
+
+    th, td {
+        padding: 5px 15px;
+        background-color: rgb(118, 111, 116);
+        border: 1px solid #202020;
+    }
+
+
+    tr th:nth-child(4) {
+        width: 300px;
+        overflow-wrap: break-word;
+    }
+
+    tr td:nth-child(1),
+    td:nth-child(3) {
+        text-align: center;
+    }
+}

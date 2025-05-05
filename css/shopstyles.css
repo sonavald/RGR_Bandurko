@@ -1,0 +1,307 @@
+body{
+    margin: 0 auto;
+    color: white;
+    background-color: #202020;
+    font-family: verdana;
+    font-size:18px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 130px;
+    position: static;
+    height: 100%;
+    width: 91%;
+    padding-bottom: 100px;
+    background: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.container{
+    margin-top: 25px;
+    display: inline-flex;
+    width: 86%;
+}
+.block-filtr{
+    display: inherit;
+    flex-direction: column;
+    font-size: 17px;
+    background-color: #766F74;
+    border: 1px #202020 solid;
+    border-radius: 9px;
+    padding-bottom:75px;
+    width: 22%;
+    height: 100%;
+}
+.block-filtr > *{
+    padding-left: 10%;
+}
+.goods-katalog{
+    position: relative;
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    width: 78%;
+    height: 100%;
+    background-color: #766F74;
+    border: 1px #202020 solid;
+    border-radius: 9px;
+}
+.goods-block{
+    margin: -1px;
+    color: #202020;
+}
+.goods-block-inner{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #766F74;
+    border: 2px #202020 solid;
+    border-radius: 9px;
+    height: auto;
+}
+.describe{
+    width: 90%;
+    display: none;
+    font-size: 14px;
+    margin-top: 0px;
+    padding: 0px 20px ;
+    border-top: 1px #202020 solid;
+    color: #bdbdbd;
+    height: 120px;
+    padding: 15px;
+}
+.goods-block:hover {
+    position: relative;
+    z-index: 15;
+}
+.goods-block-inner:hover{
+    position: absolute;
+    height: auto;
+    box-shadow: 0px 20px 25px 20px rgba(0, 0, 0, 0.25), 0px 10px 5px 10px rgba(0, 0, 0, 0.1), 0px 4px 55px rgba(189, 189, 189, 0.55);
+}
+.goods-block-inner:hover .describe{
+    display: block;
+}
+.goods-block-inner img{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 95%;
+    align-self: center;
+}
+.goods-block p{
+    font-size: 16px;
+    margin: 2px 15px 10px 15px;
+}
+.goods-block-inner div p{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    font-size: 21px;
+    bottom: 15%;
+    margin-left: 8%;
+}
+.goods-block-inner p:nth-child(3){
+    height: 65px;
+}
+.goods-block-inner div button{
+    position: absolute;
+    bottom: 15%;
+    right: 0%;
+    width: 100px;
+    height: auto;
+    font-size: 21px;
+    margin: -14.5% 10% 0% 0%;
+    height: 42px;
+    width: 42px;
+    border-radius: 9px;
+    background-color: #BA0075;
+    border: none;
+    transition: color .2s ease-out .15s;
+}
+.goods-block-inner button img{
+    margin: 0 auto;
+    padding-top: 5px;
+}
+.goods-block-inner button:hover{
+    background-color: #A60068;    
+}
+.goods-block-inner button:active{
+    background-color: #730048;    
+}
+
+.block-filtr ul{
+    list-style: none;
+    margin-top: -10px;
+    padding-left: 18%;
+}
+.block-filtr ul li{
+    margin-top: 5px;
+    height: auto;
+}
+.filtr-label{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #bdbdbd;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  border-radius: 5px;
+  left: 10px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+.container input:hover ~ .checkmark {
+  background-color: #A60068;
+}
+.container input:checked ~ .checkmark {
+  background-color: #BA0075;
+}
+.container input:active ~ .checkmark {
+  background-color: #730048;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 2px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+@media screen and (max-width: 1500px)
+{
+    .main{
+        margin-left: 100px;
+    }
+    .container{
+        width: 90%;
+    }
+    .block-filtr{
+        width: 25%;
+    }
+    .goods-katalog{
+        width: 75%;
+    }
+    .goods-katalog{
+        grid-template-columns: 3fr 3fr 3fr;
+    }
+}
+
+    
+
+@media screen and (max-width: 1200px)
+{
+    .goods-katalog{
+        grid-template-columns: 3fr 3fr;
+    }
+    .main{
+        margin-left: 0px;
+        width: 98%
+    }
+    .container{
+        width: 100%;
+    }
+    .block-filtr{
+        width: 30%;
+    }
+    .goods-katalog{
+        width: 70%;
+    }
+    .goods-block-inner p:nth-child(3){
+        font-size: 24px;
+        height: 75px;
+        height: 95px;
+        font-weight:400;
+    }
+    .goods-block-inner div p{
+        font-size: 30px;
+        width: auto;
+    }
+    .goods-block-inner div button{
+        width: 50px;
+        height: 50px;
+    }
+    .block-filtr{
+        font-size: 25px;
+    }
+    .block-filtr ul{
+        padding-left: 25px;
+    }
+    .filtr-label{
+        font-size: 18px;
+    }
+    .checkmark{
+        width: 17px;
+        height: 17px;
+        top: 1px
+    }
+    .goods-block-inner img{
+        width: 90%;
+    }
+    .describe{
+        font-size: 18px;
+        height: 135px;
+        padding-right: 0px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .main{
+        margin-left: 100px;
+    }
+    .container{
+        width: 85%;
+    }
+    .goods-katalog{
+        grid-template-columns: 3fr ;
+    }
+    .block-filtr{
+        width: 40%;
+    }
+    .goods-katalog{
+        width: 50%;
+    }
+}
